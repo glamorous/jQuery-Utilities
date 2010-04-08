@@ -48,9 +48,9 @@ Yes, it's so simple! The code above is pretty the same as this:
     $(document).ready(function(){
         $.glamUtilities({
             debug: false,
-    		externalLinks: true,
-    		externalClass: 'otherNameForClassAtAllExternalLinks',
-    		defaultValueAsLabel: true, // or you can specify wich elements that has to change: $("form input[type=text]")
+    		externalLinks: true, // when false the plugin will not add `attr('target','_blank')`
+    		externalClass: 'otherNameForClassAtAllExternalLinks', // or false
+    		defaultValueAsLabel: true, // or you can specify wich elements that has to change: `$("form input[type=text]")`
     		validateDefaultValue: false
         });
     });
@@ -88,13 +88,17 @@ If you find one, please inform us with the issue tracker on [github](http://gith
 
 ## Changelog ##
 
+**0.1.1 - 08/04/2010**
+
+- Minified version of the plugin
+- [feature] Ability to exclude the extra class for external links
+- [feature] Ability to exclude the `attr('target','_blank')`
+
 **0.1 - 07/04/2010**
 
 - First release
 
 ## Feature Requests / To come ##
-
-*  Minified and packed versions of the plugin
 
 If you want something to add on this plugin, feel free to fork the project on [github](http://github.com/glamorous/jQuery-Utilities) or add an [issue](http://github.com/glamorous/jQuery-Utilities/issues) as a feature request.
 

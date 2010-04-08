@@ -5,7 +5,7 @@
  * @author Jonas De Smet - Glamorous
  * @since 07.04.2010
  * @copyright Jonas De Smet - Glamorous
- * @version 0.1
+ * @version 0.1.1
  * @license BSD http://www.opensource.org/licenses/bsd-license.php
  * 
  */
@@ -16,7 +16,7 @@
 		settings = $.extend({}, $.glamUtilities.defaults, settings);
 		
 		// Method to search for all links and add a target='_blank' to it
-		function changeTargets(class)
+		function changeExternalLinks()
 		{
 			var links = $('a');
 			var l_length = links.length;
@@ -30,8 +30,17 @@
 					external_links.push(links[i]);
 				}
 			}
-
-			$(external_links).attr("target", "_blank").addClass(class);
+			var $extlinks = $(external_links);
+			
+			if(settings.externalLinks === true)
+			{
+				$extlinks.attr('target','_blank');
+			}
+			
+			if(settings.externalClass !== false)
+			{
+				$extlinks.addClass(settings.externalClass);
+			}
 		}
 		
 		// Method to set defaultValue as a inside label for text inputs
@@ -70,7 +79,7 @@
 		// Look wich custom methods has to be called
 		function init()
 		{	
-			if(settings.externalLinks === true){changeTargets(settings.externalClass);}
+			if(settings.externalClass !== false || settings.externalLinks === true){changeExternalLinks();}
 			if(settings.defaultValueAsLabel !== false){setInsideLabels(settings.defaultValueAsLabel);}
 			if(settings.validateDefaultValue !== false){setValidateDefault(settings.validateDefaultValue);}
 		}
