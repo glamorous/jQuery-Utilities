@@ -3,9 +3,9 @@
  * Documentation and usage in README file
  * 
  * @author Jonas De Smet - Glamorous
- * @since 07.04.2010
+ * @date 09.04.2010
  * @copyright Jonas De Smet - Glamorous
- * @version 0.1.1
+ * @version 0.1.2
  * @license BSD http://www.opensource.org/licenses/bsd-license.php
  * 
  */
@@ -100,7 +100,6 @@
 	// Glamorous SCROLLING
 	$.glamScroll = function(selector, speed)
 	{
-		console.log(speed);
 		speed = (speed !== undefined) ? speed : 500;
 		$('html,body').animate({
 			scrollTop: $(selector).offset().top
