@@ -3,9 +3,9 @@
  * Documentation and usage in README file
  * 
  * @author Jonas De Smet - Glamorous
- * @date 09.04.2010
+ * @date 18.05.2010
  * @copyright Jonas De Smet - Glamorous
- * @version 0.1.2
+ * @version 0.1.3
  * @license BSD http://www.opensource.org/licenses/bsd-license.php
  * 
  */
@@ -46,7 +46,7 @@
 		// Method to set defaultValue as a inside label for text inputs
 		function setInsideLabels(text_inputs)
 		{
-			var $inputs = (text_inputs === true) ? $("form input[type=text]") : text_inputs;
+			var $inputs = (text_inputs === true) ? $("form input[type=text], form textarea") : text_inputs;
 			
 			$inputs.each(function(){
 				var input = $(this);

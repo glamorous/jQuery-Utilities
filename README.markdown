@@ -88,6 +88,10 @@ If you find one, please inform us with the issue tracker on [github](http://gith
 
 ## Changelog ##
 
+**0.1.3 - 18/05/2010**
+
+- [feature] DefaultValue works now also with textareas
+
 **0.1.2 - 09/04/2010**
 
 - [bug] Unwanted console.log in the scroll function
