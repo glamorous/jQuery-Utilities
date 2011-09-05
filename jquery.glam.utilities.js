@@ -3,9 +3,10 @@
  * Documentation and usage in README file
  *
  * @author Jonas De Smet - Glamorous
- * @date 18.05.2010
+ * @since 07.04.2010
+ * @date 05.09.2011
  * @copyright Jonas De Smet - Glamorous
- * @version 0.1.3
+ * @version 0.2.0
  * @license BSD http://www.opensource.org/licenses/bsd-license.php
  *
  */
@@ -153,3 +154,21 @@
 		return arr;
 	};
 })(jQuery);
+
+// Method to test if a variable or jQuery object exists
+function isset(element, checkempty)
+{
+	if(typeof element == 'string')
+	{
+		console.log(typeof myvariable);
+		return (typeof window[element] != 'undefined');
+	}
+	else if(typeof element == 'undefined')
+	{
+		return false;
+	}
+	else
+	{
+		return (checkempty != false) ? element.length > 0 : true;
+	}
+}

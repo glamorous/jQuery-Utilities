@@ -82,11 +82,24 @@ Yes, it's so simple! The code above is pretty the same as this:
     
     // myArray is now [1,3,4,2]
 
+## How to use the isset function (works only for global variables and jQuery objects) ##
+
+	var $divs = jQuery('div');
+
+	isset($divs) 			// true if there are div's in the page, false if there are not div's in the page
+	isset($divs, false)		// true even if there are no divs
+	isset($divs)			// false when $divs is not defined like above
+	isset('myvariable')		// true if the variable is defined, false if not
+
 ## Issues/Bugs ##
 
 If you find one, please inform us with the issue tracker on [github](http://github.com/glamorous/jQuery-Utilities/issues).
 
 ## Changelog ##
+
+**0.2.0 - 05/09/2011**
+
+- [feature] Added an isset function to test if a global variable or jQuery object exists
 
 **0.1.3 - 18/05/2010**
 
