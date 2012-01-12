@@ -66,14 +66,17 @@
 		}
 
 		// Method to extend the jQuery Validate plugin with a rule for defaultValue
-		function setValidateDefault(settings)
+		function setValidateDefault(presets)
 		{
 			// Test if validator is not undefined
 			if(jQuery.validator !== undefined)
 			{
-				jQuery.validator.addMethod(settings.name, function(value, element) {
+				var method = (presets.name !== undefined) ? presets.name : settings.validateDefaultMethod;
+				var error = (presets.error !== undefined) ? presets.error : settings.validateDefaultErrorMessage;
+
+				jQuery.validator.addMethod(method, function(value, element) {
 					return this.optional(element) || element.defaultValue != value;
-				}, settings.error);
+				}, error);
 			}
 		}
 
@@ -95,7 +98,9 @@
 		externalLinks: true,
 		externalClass: 'external',
 		defaultValueAsLabel: false,
-		validateDefaultValue: false
+		validateDefaultValue: false,
+		validateDefaultMethod: 'defaultValue',
+		validateDefaultErrorMessage: 'The field can\'t be the default value'
 	};
 
 	// Glamorous SCROLLING
