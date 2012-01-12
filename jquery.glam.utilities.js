@@ -44,10 +44,10 @@
 			}
 		}
 
-		// Method to set defaultValue as a inside label for text inputs
+		// Method to set defaultValue as a inside label for text inputs and textareas
 		function setInsideLabels(text_inputs)
 		{
-			var $inputs = (text_inputs === true) ? $("form input[type=text]") : text_inputs;
+			var $inputs = (text_inputs === true) ? $("form input[type=text], form textarea, form input[type=email]") : text_inputs;
 
 			$inputs.each(function(){
 				var input = $(this);
