@@ -80,7 +80,7 @@
 			}
 		}
 
-		// Look wich custom methods has to be called
+		// Look which custom methods has to be called
 		function init()
 		{
 			if(settings.externalClass !== false || settings.externalLinks === true){changeExternalLinks();}
@@ -165,7 +165,6 @@ function isset(element, checkempty)
 {
 	if(typeof element == 'string')
 	{
-		console.log(typeof myvariable);
 		return (typeof window[element] != 'undefined');
 	}
 	else if(typeof element == 'undefined')
