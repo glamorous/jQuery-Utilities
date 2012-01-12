@@ -65,6 +65,8 @@ Yes, it's so simple! The code above is pretty the same as this:
       		}
         });
     });
+
+You can also pass `true` and use the fallback name and error-message.
     
 ## How to log with the plugin ##
 
@@ -96,6 +98,11 @@ Yes, it's so simple! The code above is pretty the same as this:
 If you find one, please inform us with the issue tracker on [github](http://github.com/glamorous/jQuery-Utilities/issues).
 
 ## Changelog ##
+
+**0.3.0 - 13/01/2012**
+
+- [feature] There is now a fallback method name and error message for the custom validator rule for defaultValue checking so you can pass `true` instead of an object with a method name and error message
+- [bug] From now on the defaultValue works again for textarea's, this was removed in a cleanup in commit e10a6de3f and extra cleaning up some typo's and a `console.log()` (shame on me for this one!)
 
 **0.2.0 - 05/09/2011**
 

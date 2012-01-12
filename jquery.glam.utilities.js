@@ -4,9 +4,9 @@
  *
  * @author Jonas De Smet - Glamorous
  * @since 07.04.2010
- * @date 05.09.2011
+ * @date 13.01.2012
  * @copyright Jonas De Smet - Glamorous
- * @version 0.2.0
+ * @version 0.3.0
  * @license BSD http://www.opensource.org/licenses/bsd-license.php
  *
  */
